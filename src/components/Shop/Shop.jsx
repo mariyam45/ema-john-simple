@@ -23,8 +23,9 @@ const Shop = () => {
       const addedProduct = products.find((product) => product.id === id);
       if (addedProduct) {
         const quantity = storedCard[id];
-        // step 4: add the added product to the save cart
         addedProduct.quantity = quantity;
+        // step 4: add the added product to the save cart
+        saveCart.push(addedProduct);
       }
       // console.log("addedProduct", addedProduct);
     }
